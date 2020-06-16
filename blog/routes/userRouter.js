@@ -3,7 +3,6 @@ const express = require('express');
 // 2.使用express的方法来创建路由
 const { showUser, addPage, findUsers, deleteUser, addUser } = require('../controller/userCtrl')
 const userRouter = express.Router();
-
 // 3.创建路由
 // 3.1 显示用户列表页面
 userRouter.get('/', showUser)
