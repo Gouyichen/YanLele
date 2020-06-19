@@ -37,8 +37,6 @@ app.use(session({
   // resave: false,
   // saveUninitialized: true,
   // maxAge就是cookie在浏览器中存在的时间， 单位是毫秒
-
-
   cookie: { maxAge: 60000 * 30 }
 
 }))
