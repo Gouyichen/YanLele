@@ -38,7 +38,6 @@ app.use(session({
   // saveUninitialized: true,
   // maxAge就是cookie在浏览器中存在的时间， 单位是毫秒
   cookie: { maxAge: 60000 * 30 }
-
 }))
 // 3.处理请求（挂在路由）
 app.use(indexRouter);
