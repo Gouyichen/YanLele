@@ -14,6 +14,7 @@ const session = require('express-session');
 
 // 2.设置包
 
+
 // 2.1 使用express方法创建Web服务
 const app = express();
 // 2.2 设置静态资源目录
