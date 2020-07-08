@@ -1,0 +1,32 @@
+# 37.查询每个学生的每门课的总分以及平均分
+select sno,cno,sum(degree),avg(degree) from score group by sno,cno;
+# 38.查询Score表中每门课程的平均分数（要求查询的课程至少要有3个成绩）。
+# 39.查询Score表中的最高分的学生学号和课程号
+# 40.在Teacher表中查询年龄最大的老师的信息
+# 41.查询学生”王芳”选修的课程号有哪些
+# 42.查询成绩表前面3条数据
+# 43.查询成绩表第二页的数据，每页显示三条数据
+# 44.查询“男”教师的名称及其所上的课程的名称
+# 45.查询学生”陆君”所选每门课的平均分
+# 46.查询选了课程编号为3-245且课程成绩在70分以上的学生的学号和姓名
+
+# 47.查询平均成绩大于70 的所有学生的学号、姓名和平均成绩-----
+select sno,sname,avg(degree)
+from student join score
+on student.sno=score.sno
+from degree >70;
+# 48.查询所有学生的选课情况(学生姓名和课程名和老师名)
+select 
+# 49.查询选修"计算机导论"课程的学生的姓名和学号以及成绩
+select sname,score.sno,degree from student join score join course
+on course.cno=score.cno and score.sno=student.sno
+where cname = '计算机导论';
+# 50.查询选修没有学生的老师的所有信息
+select t.* from student st join score sc join course co join teacher  t
+on co.cno=sc.cno and sc.sno=st.sno and co.tno=t.tno
+where sc.sno is null;
+
+select t.* from score as sc
+join student as st join course as c right join teacher as t
+on sc.sno = st.sno and sc.cno = c.cno and c.tno = t.tno
+where sc.sno is null;
