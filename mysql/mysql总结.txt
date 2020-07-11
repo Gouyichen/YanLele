@@ -1,0 +1,79 @@
+mysql
+1.连接数据库
+mysql -h数据库地址 -P端口号 -u用户名 -p密码
+2.显示(所有)数据库
+show databases;
+3.创建数据库
+create database 数据库名 charset utf8;
+4.选择数据库
+use 数据库名;
+5.导入数据
+用navicat premium导入汉语上去就是咚咚咚...完事/鬼脸
+6.查看该数据库下所有表
+show tables;
+7.查看表字段
+desc 表名; （没注释 not comment）
+show columns from 表名;(和上一个相同)
+8.查看表解构
+show create table stuinfo;
+9.查看字段详情（包括comment）看表解构字段注释完美的方法，全面的方法
+show full columns from 表名;
+10.添加字段
+alter table  表名 add 字段 字段类型 注释;
+11.修改表解构字段
+alter table 表名 modify 字段 字段类型 注释...;
+12.删除字段
+alter table 表名 drop 字段名;
+13.删除表主键
+alter table 表名 drop primary key;
+14.给字段添加主键
+alter table 表名 add primary key(字段);
+15.给表插入数据
+insert into 表名 values(要插入的数据');
+insert into 表名 （列名,列名,列名...）values(每列对应的值,逗号隔开，不是数字的加单引号)
+16.修改数据
+update 表名 set 要修改的列名='值' where 筛选条件;
+17.删除数据(某行，某列)
+delete 表名 where 筛选条件;
+18.查询数据（单表，子查询）;
+select [distinct] [count(*)] [concat()] [max] [min] [avg] [sun] 结果字段(各自逗号隔开) 
+from 表名
+查询条件（where  group by order by having）字段 = （select.....{这是注释：子查询}）
+19.查询数据(多表查询);
+select [distinct] [count(*)] [concat()] [max] [min] [avg] [sun] 结果字段(各自逗号隔开，有的可能要加上库名) 
+from 表名 join 表名 join 表名...
+on 表名.共同字段（列)=表名.共同字段（列)and  表名.共同字段（列)=表名.共同字段(列)...
+查询条件（where  group by order by having）字段 = （select.....{这是注释：子查询}）
+
+
+
+
+创建数据库单词
+字符集 charset
+注释 comment
+
+创建表重要单词
+unsigned  无符号  
+not null 非空
+default 默认值
+primary key 设为主键
+
+修改表重要单词
+add 添加字段（辅助记忆法）
+modify 修改字段
+auto_increment 自动增长
+
+
+
+建表字段全部要掌握（单词也不多，上面只写了一丢丢）
+
+查询自当多练习 孰能生巧  英语功底
+
+多看案例，多练案例，会看到许多不一样的方法做同一个题（我喜欢用最简单的方法查询出结果，字少是关键）
+
+
+
+
+
+
+
