@@ -9,7 +9,6 @@ select sno,cno,sum(degree),avg(degree) from score group by sno,cno;
 # 44.查询“男”教师的名称及其所上的课程的名称
 # 45.查询学生”陆君”所选每门课的平均分
 # 46.查询选了课程编号为3-245且课程成绩在70分以上的学生的学号和姓名
-
 # 47.查询平均成绩大于70 的所有学生的学号、姓名和平均成绩-----
 select sno,sname,avg(degree)
 from student join score
@@ -30,9 +29,6 @@ select t.* from score as sc
 join student as st join course as c right join teacher as t
 on sc.sno = st.sno and sc.cno = c.cno and c.tno = t.tno
 where sc.sno is null;
-
-
-
 
 # 37.查询每个学生的每门课的总分以及平均分
 select sno,cno,sum(degree),avg(degree) from score group by sno,cno;
