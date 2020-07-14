@@ -35,6 +35,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 // 2.5 //为html扩展名注册ejs
 // app.engine('html',ejs.renderFile);
+
 // 3.挂载路由
 // 3.1 挂载首页路由
 app.use(index);
@@ -54,6 +55,7 @@ app.use('/admin', adminComments);
 app.use('/admin', adminUsers);
 // 3.8 挂载设置路由
 app.use('/admin', adminSettings);
+
 // 4.指定端口并启动服务
 app.listen(3000, () => {
   console.log("请打开: http://localhost:3000");
