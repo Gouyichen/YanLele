@@ -23,8 +23,10 @@ const adminComments = require('./routes/adminCommentsRouter');
 const adminUsers = require('./routes/adminUsersRouter');
 // 1.12 导入后台系统设置路由
 const adminSettings = require('./routes/adminSettingsRouter');
-// 2.设置包
+// 1.13 引入session包
+const session = require('express-session');
 
+// 2.设置包
 // 2.1 创建服务器
 const app = express();
 // 2.2 配置静态资源
@@ -35,6 +37,29 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 // 2.5 //为html扩展名注册ejs
 // app.engine('html',ejs.renderFile);
+// 2.6 配置urlencoded
+app.use(express.urlencoded({ extended: false }));
+// 2.7 配置session包
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 60000 * 10
+  }
+}))
+// 2.8 路由拦截(登录页面就让访问 如果req.session.user 也让访问)
+app.use(function (req, res, next) {
+  // 获取url
+  let url = req.originalUrl;
+  // 判断 是不是登录页 和是否没有req.session.user 就让页面跳转到登录页
+  if (url != '/admin/login' && !req.session.user) {
+    // 重定向到登录页
+    return res.redirect("/admin/login");
+  }
+  next();
+})
+
 
 // 3.挂载路由
 // 3.1 挂载首页路由
