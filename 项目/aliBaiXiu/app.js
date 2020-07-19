@@ -75,6 +75,7 @@ app.use('/admin', adminIndex);
 app.use('/admin', adminPosts);
 // 3.6 挂载评论路由
 app.use('/admin', adminComments);
+
 // 3.7 挂载用户路由
 app.use('/admin', adminUsers);
 
