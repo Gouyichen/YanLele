@@ -73,6 +73,7 @@ app.use('/admin', adminLogin);
 app.use('/admin', adminIndex);
 // 3.6 挂载文章路由
 app.use('/admin', adminPosts);
+
 // 3.6 挂载评论路由
 app.use('/admin', adminComments);
 
