@@ -63,7 +63,8 @@ app.use(function (req, res, next) {
 // 3.挂载路由
 // 3.1 挂载首页路由
 app.use(index);
-// 3.2 挂载列表路由
+// 3.2 挂载列表路由、
+
 app.use(list);
 // 3.3 挂载详情路由
 app.use(detail);
@@ -73,8 +74,7 @@ app.use('/admin', adminLogin);
 app.use('/admin', adminIndex);
 // 3.6 挂载文章路由
 app.use('/admin', adminPosts);
-
-// 3.6 挂载评论路由
+        // 3.6 挂载评论路由
 app.use('/admin', adminComments);
 
 // 3.7 挂载用户路由
