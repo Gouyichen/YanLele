@@ -72,6 +72,7 @@ app.use(detail);
 
 // 3.4 挂载登录路由
 app.use('/admin', adminLogin);
+
 // 3.5 挂载首页路由
 app.use('/admin', adminIndex);
 // 3.6 挂载文章路由
