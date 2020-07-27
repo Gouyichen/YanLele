@@ -9,6 +9,7 @@ const path = require('path');
 const index = require('./routes/indexRouter');
 // 1.4 导入用户系统列表路由
 const list = require('./routes/listRouter');
+
 // 1.5 导入用户系统详情路由
 const detail = require('./routes/detailRouter');
 // 1.6 导入ejs包
