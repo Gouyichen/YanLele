@@ -12,6 +12,7 @@ const list = require('./routes/listRouter');
 
 // 1.5 导入用户系统详情路由
 const detail = require('./routes/detailRouter');
+
 // 1.6 导入ejs包
 // const ejs = require('ejs');
 // 1.7 导入后台系统登录路由
