@@ -15,6 +15,7 @@ const detail = require('./routes/detailRouter');
 
 // 1.6 导入ejs包
 // const ejs = require('ejs');
+
 // 1.7 导入后台系统登录路由
 const adminLogin = require('./routes/adminLoginRouter');
 // 1.8 导入后台系统首页路由
