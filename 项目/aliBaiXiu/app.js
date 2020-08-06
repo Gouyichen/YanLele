@@ -41,6 +41,7 @@ const session = require('express-session');
 const app = express();
 // 2.2 配置静态资源
 app.use(express.static(path.join(__dirname, 'public')));
+
 // 2.3 把views设置为模板文件的根目录
 app.set('views', path.join(__dirname, 'views'));
 // 2.4 设置模板引擎为ejs
