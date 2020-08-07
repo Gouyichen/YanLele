@@ -44,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 2.3 把views设置为模板文件的根目录
 app.set('views', path.join(__dirname, 'views'));
+
 // 2.4 设置模板引擎为ejs
 app.set('view engine', 'ejs');
 // 2.5 //为html扩展名注册ejs
