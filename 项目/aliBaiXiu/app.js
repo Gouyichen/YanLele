@@ -47,6 +47,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // 2.4 设置模板引擎为ejs
 app.set('view engine', 'ejs');
+
 // 2.5 //为html扩展名注册ejs
 // app.engine('html',ejs.renderFile);
 // 2.6 配置urlencoded
