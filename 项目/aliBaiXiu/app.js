@@ -52,6 +52,7 @@ app.set('view engine', 'ejs');
 // app.engine('html',ejs.renderFile);
 // 2.6 配置urlencoded
 app.use(express.urlencoded({ extended: false }));
+
 // 2.7 配置session包
 app.use(session({
   secret: 'keyboard cat',
