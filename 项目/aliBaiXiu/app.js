@@ -90,6 +90,7 @@ app.use('/admin', adminLogin);
 
 // 3.5 挂载首页路由
 app.use('/admin', adminIndex);
+
 // 3.6 挂载文章路由
 app.use('/admin', adminPosts);
         // 3.6 挂载评论路由
