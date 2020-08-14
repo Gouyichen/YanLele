@@ -79,8 +79,8 @@ app.use(function (req, res, next) {
 
 // 3.1 挂载首页路由
 app.use(index);
-// 3.2 挂载列表路由、
 
+// 3.2 挂载列表路由、
 app.use(list);
 // 3.3 挂载详情路由
 app.use(detail);
